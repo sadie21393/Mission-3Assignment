@@ -182,7 +182,7 @@ internal class Program
             if (userInput == 2)
             {
                 FoodItem fi3 = new FoodItem(name, category, quantity, expiration);
-                fi3.deleteFood(userInput);
+                fi3.deleteFood();
             }
 
             if (userInput == 4)

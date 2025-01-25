@@ -45,9 +45,27 @@ namespace Mission_3Assignment
                 }
             }
         }
-        public void deleteFood(int userInput)
+        public void deleteFood()
         {
-            printList();
+
+            int userInput = 0;
+            bool removeValid = false;
+
+            while (removeValid == false)
+            {
+                printList();
+                Console.WriteLine("What item would you like to remove (ex:1-100)");
+
+                if (int.TryParse(Console.ReadLine(), out int itemInput) && itemInput > 0)
+                {
+                    userInput = itemInput;
+                    removeValid = true;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid input. Please enter a valid integer (ex: 1-100)");
+                }
+            }
 
             if (userInput > 0 && userInput <= foodlist.Count)
             {
